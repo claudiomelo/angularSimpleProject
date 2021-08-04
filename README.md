@@ -1,1 +1,1 @@
-# angular1
+# A simple project made in angularJS
