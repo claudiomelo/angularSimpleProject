@@ -1,0 +1,22 @@
+{
+  "transfers": [
+    {
+      "id": "1",
+      "transferValue": 35,
+      "transferAccount": "1212-1",
+      "date": "2020-11-04T16:30:10.710Z"
+    },
+    {
+      "id": "2",
+      "transferValue": 40,
+      "transferAccount": "1213-1",
+      "date": "2020-11-04T21:24:10.710Z"
+    },
+    {
+      "id": "3",
+      "transferValue": 12.5,
+      "transferAccount": "1214-1",
+      "date": "2020-11-05T21:14:10.710Z"
+    }
+  ]
+}

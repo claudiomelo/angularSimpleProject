@@ -1,0 +1,7 @@
+<app-bank-transfer-form 
+	(whenTransfer)="transferOutput($event)"
+	(errorsEmitter)="showErros($event)"
+></app-bank-transfer-form>
+
+<app-account-statement></app-account-statement>
+<!-- [transferData]="transferData" when use @Input-->

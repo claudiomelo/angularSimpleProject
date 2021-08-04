@@ -1,0 +1,29 @@
+<table class="table">
+	<thead>
+		<tr class="table__header">
+			<th class="table__header__content">Date</th>
+			<th class="table__header__content">Account</th>
+			<th class="table__header__content">Value</th>
+		</tr>
+	</thead>
+
+	<tbody *ngIf="transfersData.length > 0; else emptyMessage">
+		<tr *ngFor="let transfer of transfersData" class="table__row">
+			<td class="table__row__content">
+				{{transfer.date | date: "short"}}
+			</td>
+
+			<td class="table__row__content">
+				{{transfer.transferAccount}}
+			</td>
+
+			<td class="table__row__content">
+				{{transfer.transferValue | currency:"R$"}}
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<ng-template #emptyMessage>
+	<p>No transfers made...</p>
+</ng-template>
