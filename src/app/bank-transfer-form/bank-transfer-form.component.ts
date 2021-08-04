@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { BankTransferService } from '../services/bank-transfer.service';
 import { Transfers } from '../models/transfers.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bank-transfer-form',
@@ -9,13 +10,16 @@ import { Transfers } from '../models/transfers.model';
 })
 export class BankTransferFormComponent implements OnInit {
 
-  constructor(private service: BankTransferService) {
+  constructor(
+  	private service: BankTransferService,
+  	private router: Router
+  ) {
   }
 
   ngOnInit(): void {
   }
 
-  // @Output() whenTransfer = new EventEmitter<any>();
+  @Output() whenTransfer = new EventEmitter<any>();
   @Output() errorsEmitter = new EventEmitter<string>();
 
   transferValue: number = 0;
@@ -30,13 +34,15 @@ export class BankTransferFormComponent implements OnInit {
 	  	}
 
 	  	this.service.addTransfer(data).subscribe(result => {
+	  		// this.router.navigate(['account-statement'], 10);
+	  		this.router.navigateByUrl('account-statement');
+	  		this.whenTransfer.emit(result);
 		  	this.transferOutput2(result);
 		  	this.cleanFields();
 	  	},
 	  	error => {
 	  		console.log('error:', error)
 	  	});
-	  	// this.whenTransfer.emit(data);
     }
   }
 

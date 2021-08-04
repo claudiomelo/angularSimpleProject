@@ -10,17 +10,18 @@ import { BankTransferService } from './services/bank-transfer.service';
 export class AppComponent {
   title = 'angular1';
 
+  transfersData: any[] = [];
   constructor(private bankTransferService: BankTransferService)
   {
 
   }
 
-  // transferOutput($event:any)
-  // {
-  //   this.bankTransferService.addTransfer($event)
-  //   // const transfer = {...$event, date: new Date()};
-  //   // this.transferData.push(transfer);
-  // }
+  transferOutput($event:any)
+  {
+    // this.bankTransferService.addTransfer($event)
+    // const transfer = {...$event, date: new Date()};
+    this.transfersData.push($event);
+  }
 
   showErros(message:string)
   {

@@ -1,7 +1,7 @@
-<app-bank-transfer-form 
-	(errorsEmitter)="showErros($event)"
-></app-bank-transfer-form>
-<!-- (whenTransfer)="transferOutput($event)" -->
-
-<app-account-statement></app-account-statement>
-<!-- [transferData]="transferData" when use @Input-->
+<header class="header">
+	<a routerLink="account-statement" routerLinkActive="ativo">Account Statement</a>
+	<a routerLink="new-transfer" routerLinkActive="ativo">New Transfer</a>
+</header>
+<main class="main">
+	<router-outlet></router-outlet>
+</main>
