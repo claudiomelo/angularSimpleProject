@@ -15,12 +15,12 @@ export class AppComponent {
 
   }
 
-  transferOutput($event:any)
-  {
-    this.bankTransferService.addTransfer($event)
-    // const transfer = {...$event, date: new Date()};
-    // this.transferData.push(transfer);
-  }
+  // transferOutput($event:any)
+  // {
+  //   this.bankTransferService.addTransfer($event)
+  //   // const transfer = {...$event, date: new Date()};
+  //   // this.transferData.push(transfer);
+  // }
 
   showErros(message:string)
   {

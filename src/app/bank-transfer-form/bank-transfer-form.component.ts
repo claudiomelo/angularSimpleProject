@@ -15,7 +15,7 @@ export class BankTransferFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Output() whenTransfer = new EventEmitter<any>();
+  // @Output() whenTransfer = new EventEmitter<any>();
   @Output() errorsEmitter = new EventEmitter<string>();
 
   transferValue: number = 0;

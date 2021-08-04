@@ -27,13 +27,13 @@ export class BankTransferService {
 
   addTransfer(transfer:Transfers): Observable<Transfers>
   {
+    this.hidratate(transfer);
     return this.httpClient.post<Transfers>(this.url, transfer);
-    // this.hidratate(transfer)
     // this.transfers.push(transfer);
   }
 
   private hidratate(transfer:Transfers)
   {
-    transfer.date = new Date();
+    transfer.date = new Date().toString();
   }
 }
